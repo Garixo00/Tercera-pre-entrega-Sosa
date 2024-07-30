@@ -1,0 +1,61 @@
+{% extends 'appproyecto3pe/padre.html' %}
+
+{% block titulo %} Pagina de Calidad | Formulario Evaluaciones {% endblock titulo %}
+
+{% block tituloprincipal %}
+<header style="background-color: #9B9B9B;" class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center my-10">
+                    <h1 class="display-5 fw-bolder text-black mb-2">Pagina principal de las evaluaciones a los asesores</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock tituloprincipal %}
+
+{% block formularium %}
+<section class="bg-light py-1">
+    <div class="container px-5 my-5 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Ingresar los datos solicitados</h2>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <form id="/evaluacion_formulario/" method="POST">
+                    {% csrf_token %}
+                    <!-- Id Evaluador input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="id_evaluador" type="text" name="id_evaluador" placeholder="Ingrese id de evaluador..." data-sb-validations="required" data-sb-can-submit="no"/>
+                        <label for="id_evaluador">Id Evaluador</label>
+                        <div class="invalid-feedback" data-sb-feedback="id_evaluador:required">Id Evaluador es requerido.</div>
+                    </div>
+                    <!-- Id Asesor input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="id_asesor" type="text" name="id_asesor" placeholder="Ingrese Id Asesor..." data-sb-validations="required" />
+                        <label for="id_asesor">Id Asesor</label>
+                        <div class="invalid-feedback" data-sb-feedback="id_asesor:required">Id Asesor es requerido.</div>
+                    </div>
+                    <!-- Id Asesor input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="id_evaluacion" type="text" name="id_evaluacion" placeholder="Ingrese Id Asesor..." data-sb-validations="required" />
+                        <label for="id_evaluacion">Id Evaluacion</label>
+                        <div class="invalid-feedback" data-sb-feedback="id_evaluacion:required">Id Evaluacion es requerido.</div>
+                    </div>
+                    <!-- Fecha Evaluacion input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="fecha_evaluacion" type="date" name="fecha_evaluacion" placeholder="Ingrese Fecha Evaluacion..." data-sb-validations="required" />
+                        <label for="fecha_evaluacion">Fecha Evaluacion</label>
+                        <div class="invalid-feedback" data-sb-feedback="fecha_evaluacion:required">Fecha Evaluacion es requerido.</div>
+                    </div>
+                    <p></p>
+                    <div class="d-grid"><input class="btn btn-primary" type="submit" value="Click para cargar"></div><p></p>
+                    <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'evaluaciones' %}">Volver</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock formularium %} 

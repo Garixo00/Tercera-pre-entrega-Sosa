@@ -1,0 +1,52 @@
+{% extends 'appproyecto3pe/padre.html' %}
+
+{% block titulo %} Pagina de Calidad | Evaluadores {% endblock titulo %}
+
+{% block tituloprincipal %}
+<header style="background-color: #004d00;" class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center my-10">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Pagina principal de evaluadores de Calidad</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock tituloprincipal %}
+
+{% block sublinks %}   
+<section class="bg-light py-1 border-bottom">
+    <div class="container px-1 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Opciones para gestionar</h2>
+            <p class="lead mb-0">Usted puede: Agregar evaluadores o Buscar evaluadores</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <!-- Ir a Agregar asesores-->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card mb-5 mb-xl-0">
+                    <div class="card-body p-6">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bolder">Agregar Evaluadores</h2><p></p>
+                        </div>
+                        <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'EvaluadorFormulario' %}">Click para Ir</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ir a Buscar asesores-->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card mb-5 mb-xl-0">
+                    <div class="card-body p-6">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bolder">Buscar Evaluadores</h2><p></p>
+                        </div>
+                        <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'BusquedaEvaluador' %}">Click para Ir</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock sublinks %}

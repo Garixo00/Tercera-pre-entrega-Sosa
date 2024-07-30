@@ -1,0 +1,38 @@
+{% extends 'appproyecto3pe/padre.html' %}
+
+{% block titulo %} Pagina de Calidad | Asesores {% endblock titulo %}
+
+{% block tituloprincipal %}
+<header class="bg-dark py-5"> 
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center my-10">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Pagina principal de asesores a evaluar</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock tituloprincipal %}
+
+{% block sublinks %}   
+<section class="bg-light py-1 border-bottom">
+    <div class="container px-1 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Asesor registrado de manera correcta</h2>
+            </div>
+            <!-- Volver-->
+                <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'asesores' %}">Click para Volver a Asesores</a></div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</section>
+{% endblock sublinks %}
+
